@@ -80,7 +80,7 @@ def get_weather(city_name, date):
         server_msg = sock.recv(1024)
         server_msg = server_msg.decode()
         if "500" not in server_msg:
-            output = server_msg[server_msg.index("temp=") + 5:].split("&")
+            output = server_msg[server_msg.index("temp=") + 5 :].split("&")
             output[1] = output[1][5:]
             (tuple(output))
         else:

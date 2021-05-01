@@ -47,13 +47,13 @@ def fix_msg(msg):
 
 def fix_image(msg):
     if "jpg" in msg:
-        msg = msg[: msg.index("jpg")] + ".jpg" + msg[msg.index('"&id'):]
+        msg = msg[: msg.index("jpg")] + ".jpg" + msg[msg.index('"&id') :]
     return msg
 
 
 def html_error(msg):
     if "SERVERERROR" in msg:
-        msg = "ERROR" + msg[msg.index("#"):]
+        msg = "ERROR" + msg[msg.index("#") :]
     return msg
 
 
@@ -61,10 +61,6 @@ def ban(msg):
     if "France" in msg:
         msg = 'ERROR#"France is banned!"'
     return msg
-
-
-
-
 
 
 if __name__ == "__main__":
